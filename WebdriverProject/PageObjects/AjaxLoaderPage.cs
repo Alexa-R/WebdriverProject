@@ -15,7 +15,7 @@ namespace WebdriverProject.PageObjects
         private IWebElement _greenClickMeButton;
 
         [FindsBy(How = How.XPath, Using = "//*[@class='modal-title']")]
-        private IWebElement _alertPopupHeader;
+        private IWebElement _alertPopupTitle;
 
         [FindsBy(How = How.XPath, Using = "//*[@class='modal-header']//*[@class='close']")]
         private IWebElement _alertPopupXCloseButton;
@@ -34,9 +34,9 @@ namespace WebdriverProject.PageObjects
         public string GetAlertPopupHeaderText()
         {
             var wait = new WebDriverWait(WebDriverFactory.Driver, TimeSpan.FromSeconds(5));
-            wait.Until((d) => _alertPopupHeader.Displayed);
+            wait.Until((d) => _alertPopupTitle.Displayed);
             
-            return _alertPopupHeader.Text;
+            return _alertPopupTitle.Text;
         }
 
         public void ClickAlertPopupXCloseButton()
