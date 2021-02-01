@@ -23,9 +23,7 @@ namespace WebdriverProject.Helpers
 
         public static bool IsAlertDisplayed()
         {
-            var alertText = WebDriverFactory.Driver.SwitchTo().Alert().Text;
-
-            return alertText != null;
+            return WebDriverFactory.Driver.SwitchTo().Alert() != null;
         }
     }
 }
