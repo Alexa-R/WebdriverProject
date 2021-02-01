@@ -12,8 +12,7 @@ namespace WebdriverProject.TestCases.ToDoLists
             Pages.HomePage.ClickToDoListLink();
             Pages.ToDoListPage.AddNewItem("NewItem1");
             Pages.ToDoListPage.AddNewItem("NewItem2");
-            Pages.ToDoListPage.RemoveLastItem(); 
-           
+            Pages.ToDoListPage.RemoveLastItem();
             Assert.AreEqual(4, Pages.ToDoListPage.GetItemsListCount());
         }
     }

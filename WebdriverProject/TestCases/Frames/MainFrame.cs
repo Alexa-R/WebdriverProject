@@ -10,7 +10,6 @@ namespace WebdriverProject.TestCases.Frames
         public void CheckWhoAreWeDescriptionText()
         {
             Pages.HomePage.ClickIFrameLink();
-
             Assert.That(Pages.FramePage.GetWhoAreWeDescriptionText(), Contains.Substring("Lorem ipsum"));
 
             Pages.FramePage.ClickIFrameNavBarTitle();

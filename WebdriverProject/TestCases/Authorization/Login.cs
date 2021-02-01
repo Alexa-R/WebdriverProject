@@ -15,7 +15,6 @@ namespace WebdriverProject.TestCases.Authorization
             Pages.LoginPortalPage.EnterLogin(ConfigurationManager.AppSettings["Login"]);
             Pages.LoginPortalPage.EnterPassword(ConfigurationManager.AppSettings["Password"]);
             Pages.LoginPortalPage.ClickLoginButton();
-            
             Assert.AreEqual("validation failed", AlertHelper.GetAlertText());
 
             AlertHelper.AcceptAlert();

@@ -12,7 +12,6 @@ namespace WebdriverProject.TestCases.AjaxLoaders
             Pages.HomePage.ClickAjaxLoaderLink();
             Pages.AjaxLoaderPage.WaitLoaderBarDisappear();
             Pages.AjaxLoaderPage.ClickGreenClickMeButton();
-            
             Assert.That(Pages.AjaxLoaderPage.GetAlertPopupHeaderText(), Contains.Substring("Well Done"));
 
             Pages.AjaxLoaderPage.ClickAlertPopupXCloseButton();

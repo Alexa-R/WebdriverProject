@@ -13,7 +13,6 @@ namespace WebdriverProject.TestCases.FileUploads
             Pages.HomePage.ClickFileUploadLink();
             Pages.FileUploadPage.UploadFile("C:/Users/Alexa/source/repos/WebdriverProject/WebdriverProject/Resources/WebDriverTask.docx");
             Pages.FileUploadPage.ClickUploadSubmitButton();
-
             Assert.True(AlertHelper.IsAlertDisplayed());
         }
     }

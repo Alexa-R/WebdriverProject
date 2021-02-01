@@ -13,16 +13,12 @@ namespace WebdriverProject.TestCases.PopupAlerts
             Pages.HomePage.ClickPopupAlertsLink();
             Pages.PopupAlertsPage.ClickJsAlertClickMeButton();
             AlertHelper.AcceptAlert();
-
             Pages.PopupAlertsPage.ClickModalPopupClickMeButton();
             Pages.PopupAlertsPage.ClickAlertPopupXCloseButton();
-
             Pages.PopupAlertsPage.ClickJsConfirmBoxClickMeButton();
             AlertHelper.AcceptAlert();
-
             Pages.PopupAlertsPage.ClickJsConfirmBoxClickMeButton();
             AlertHelper.CancelAlert();
-
             Assert.AreEqual("You pressed Cancel!", Pages.PopupAlertsPage.GetConfirmAlertLabelText());
         }
     }

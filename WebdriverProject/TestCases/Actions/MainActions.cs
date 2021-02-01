@@ -12,7 +12,6 @@ namespace WebdriverProject.TestCases.Actions
         {
             Pages.HomePage.ClickActionsLink();
             Pages.ActionsPage.DragAndDropDragMeElement();
-
             Assert.AreEqual("Dropped!", Pages.ActionsPage.GetDropHereElementText());
 
             var clickMeElementColor = Pages.ActionsPage.GetDoubleClickMeElementColor();
@@ -22,12 +21,10 @@ namespace WebdriverProject.TestCases.Actions
 
             Pages.ActionsPage.HoverSecondDropdownMenu();
             Pages.ActionsPage.ClickLinkOneFromSecondDropdownList();
-
             Assert.AreEqual("Well done you clicked on the link!", AlertHelper.GetAlertText());
 
             AlertHelper.AcceptAlert();
             Pages.ActionsPage.ClickAndHoldClickAndHoldElement();
-
             Assert.That(Pages.ActionsPage.GetClickAndHoldElementText(), Contains.Substring("Well done"));
         }
     }

@@ -12,7 +12,6 @@ namespace WebdriverProject.TestCases.Accordions
             Pages.HomePage.ClickAccordionLink();
             Pages.AccordionPage.WaitLoadingCompleteAppear();
             Pages.AccordionPage.ClickKeepClickingAccordion();
-
             Assert.AreEqual("This text has appeared after 5 seconds!", Pages.AccordionPage.GetExpandedKeepClickingAccordionText());
 
             Pages.AccordionPage.ClickKeepClickingAccordion();
