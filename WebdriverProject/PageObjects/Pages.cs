@@ -9,6 +9,7 @@ namespace WebdriverProject.PageObjects
         {
             var page = new T();
             PageFactory.InitElements(WebDriverFactory.Driver, page);
+
             return page;
         }
 
