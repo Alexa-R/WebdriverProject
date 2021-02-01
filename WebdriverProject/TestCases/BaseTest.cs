@@ -4,6 +4,7 @@ using WebdriverProject.WrapperFactory;
 
 namespace WebdriverProject.TestCases
 {
+    [TestFixture]
     public class BaseTest
     {
         [SetUp]
@@ -14,8 +15,8 @@ namespace WebdriverProject.TestCases
             WebDriverFactory.Driver.Manage().Window.Maximize();
         }
 
-        [TearDown]
-        public void TearDownTest()
+        [OneTimeTearDown]
+        public void OneTimeTearDownTest()
         {
             WebDriverFactory.CloseAllDrivers();
         }
