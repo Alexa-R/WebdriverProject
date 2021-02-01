@@ -1,8 +1,6 @@
-﻿using System;
-using OpenQA.Selenium;
+﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Support.PageObjects;
-using OpenQA.Selenium.Support.UI;
-using WebdriverProject.WrapperFactory;
+using WebdriverProject.Helpers;
 
 namespace WebdriverProject.PageObjects
 {
@@ -19,8 +17,7 @@ namespace WebdriverProject.PageObjects
 
         public void WaitLoadingCompleteAppear()
         {
-            var wait = new WebDriverWait(WebDriverFactory.Driver, TimeSpan.FromSeconds(20));
-            wait.Until(ExpectedConditions.TextToBePresentInElement(_loaderBar, "LOADING COMPLETE."));
+            WaitHelper.WaitUntilTextToBePresentInElement(20, _loaderBar, "LOADING COMPLETE.");
         }
 
         public void ClickKeepClickingAccordion()

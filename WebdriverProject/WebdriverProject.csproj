@@ -63,6 +63,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Helpers\AlertHelper.cs" />
+    <Compile Include="Helpers\WaitHelper.cs" />
     <Compile Include="PageObjects\AccordionPage.cs" />
     <Compile Include="PageObjects\ActionsPage.cs" />
     <Compile Include="PageObjects\AjaxLoaderPage.cs" />

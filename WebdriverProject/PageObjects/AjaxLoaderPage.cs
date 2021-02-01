@@ -1,8 +1,6 @@
-﻿using System;
-using OpenQA.Selenium;
+﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Support.PageObjects;
-using OpenQA.Selenium.Support.UI;
-using WebdriverProject.WrapperFactory;
+using WebdriverProject.Helpers;
 
 namespace WebdriverProject.PageObjects
 {
@@ -22,8 +20,7 @@ namespace WebdriverProject.PageObjects
 
         public void WaitLoaderBarDisappear()
         {
-            var wait = new WebDriverWait(WebDriverFactory.Driver, TimeSpan.FromSeconds(10));
-            wait.Until((d) => !_loaderBar.Displayed);
+            WaitHelper.WaitUntilElementDisappear(10, _loaderBar);
         }
 
         public void ClickGreenClickMeButton()
@@ -33,8 +30,7 @@ namespace WebdriverProject.PageObjects
 
         public string GetAlertPopupHeaderText()
         {
-            var wait = new WebDriverWait(WebDriverFactory.Driver, TimeSpan.FromSeconds(5));
-            wait.Until((d) => _alertPopupTitle.Displayed);
+            WaitHelper.WaitUntilElementDisplayed(5, _alertPopupTitle);
             
             return _alertPopupTitle.Text;
         }

@@ -1,9 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Interactions;
 using OpenQA.Selenium.Support.PageObjects;
-using OpenQA.Selenium.Support.UI;
+using WebdriverProject.Helpers;
 using WebdriverProject.WrapperFactory;
 
 namespace WebdriverProject.PageObjects
@@ -32,8 +31,7 @@ namespace WebdriverProject.PageObjects
 
         public int GetItemsListCount()
         {
-            var wait = new WebDriverWait(WebDriverFactory.Driver, TimeSpan.FromSeconds(5));
-            wait.Until((d) => _itemsList.Count == 4);
+            WaitHelper.WaitUntilItemsListCountEqualNumber(5, _itemsList, 4);
 
             return _itemsList.Count;
         }

@@ -1,8 +1,6 @@
-﻿using System;
-using OpenQA.Selenium;
+﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Support.PageObjects;
-using OpenQA.Selenium.Support.UI;
-using WebdriverProject.WrapperFactory;
+using WebdriverProject.Helpers;
 
 namespace WebdriverProject.PageObjects
 {
@@ -35,8 +33,7 @@ namespace WebdriverProject.PageObjects
 
         public void ClickAlertPopupXCloseButton()
         {
-            var wait = new WebDriverWait(WebDriverFactory.Driver, TimeSpan.FromSeconds(5));
-            wait.Until(ExpectedConditions.ElementToBeClickable(_alertPopupXCloseButton));
+            WaitHelper.WaitUntilElementToBeClickable(5, _alertPopupXCloseButton);
 
             _alertPopupXCloseButton.Click();
         }
