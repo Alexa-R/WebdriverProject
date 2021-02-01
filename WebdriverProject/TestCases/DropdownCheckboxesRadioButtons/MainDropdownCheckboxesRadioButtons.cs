@@ -1,4 +1,5 @@
 ﻿using NUnit.Framework;
+using WebdriverProject.Enums;
 using WebdriverProject.PageObjects;
 
 namespace WebdriverProject.TestCases.DropdownCheckboxesRadioButtons
@@ -13,8 +14,8 @@ namespace WebdriverProject.TestCases.DropdownCheckboxesRadioButtons
             Pages.DropdownCheckboxesRadioButtonsPage.SelectCSharpFromLanguageDropdownList();
             Pages.DropdownCheckboxesRadioButtonsPage.SelectMavenFromFrameworksDropdownList();
             Pages.DropdownCheckboxesRadioButtonsPage.SelectCssFromWebDropdownList();
-            Pages.DropdownCheckboxesRadioButtonsPage.ClickOption1FromOptionsCheckboxesList();
-            Pages.DropdownCheckboxesRadioButtonsPage.ClickOption3FromOptionsCheckboxesList();
+            Pages.DropdownCheckboxesRadioButtonsPage.ClickOptionFromOptionsCheckboxesList((int)OptionsCheckboxesEnum.Option1);
+            Pages.DropdownCheckboxesRadioButtonsPage.ClickOptionFromOptionsCheckboxesList((int)OptionsCheckboxesEnum.Option3);
             Pages.DropdownCheckboxesRadioButtonsPage.SelectYellowFromColorsRadioButtonsList();
             Assert.IsTrue(Pages.DropdownCheckboxesRadioButtonsPage.IsCabbageFromPlantsRadioButtonsListDisabled());
             

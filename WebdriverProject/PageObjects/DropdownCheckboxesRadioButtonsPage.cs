@@ -42,14 +42,9 @@ namespace WebdriverProject.PageObjects
             _webDropdownList[1].Click();
         }
 
-        public void ClickOption1FromOptionsCheckboxesList()
+        public void ClickOptionFromOptionsCheckboxesList(int optionIndex)
         {
-            _optionsCheckboxesList[0].Click();
-        }
-
-        public void ClickOption3FromOptionsCheckboxesList()
-        {
-            _optionsCheckboxesList[2].Click();
+            _optionsCheckboxesList[optionIndex].Click();
         }
 
         public void SelectYellowFromColorsRadioButtonsList()
