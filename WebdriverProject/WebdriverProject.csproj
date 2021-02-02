@@ -62,7 +62,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Enums\DropdownMenusEnum.cs" />
+    <Compile Include="Enums\FrameworksDropdownEnum.cs" />
+    <Compile Include="Enums\LanguagesDropdownEnum.cs" />
     <Compile Include="Enums\OptionsCheckboxesEnum.cs" />
+    <Compile Include="Enums\WebDropdownEnum.cs" />
     <Compile Include="Helpers\AlertHelper.cs" />
     <Compile Include="Helpers\WaitHelper.cs" />
     <Compile Include="PageObjects\AccordionPage.cs" />
@@ -87,6 +91,7 @@
     <Compile Include="TestCases\Frames\MainFrame.cs" />
     <Compile Include="TestCases\PopupAlerts\MainPopupAlerts.cs" />
     <Compile Include="TestCases\ToDoLists\MainToDoList.cs" />
+    <Compile Include="WrapperElement\WrapperWebElement.cs" />
     <Compile Include="WrapperFactory\WebDriverFactory.cs" />
   </ItemGroup>
   <ItemGroup>

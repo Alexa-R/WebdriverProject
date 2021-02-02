@@ -11,9 +11,9 @@ namespace WebdriverProject.TestCases.DropdownCheckboxesRadioButtons
         public void CheckCabbageRadioButtonAndOrangeOptionAreDisabled()
         {
             Pages.HomePage.ClickDropdownCheckboxesRadiobuttonsLink();
-            Pages.DropdownCheckboxesRadioButtonsPage.SelectCSharpFromLanguageDropdownList();
-            Pages.DropdownCheckboxesRadioButtonsPage.SelectMavenFromFrameworksDropdownList();
-            Pages.DropdownCheckboxesRadioButtonsPage.SelectCssFromWebDropdownList();
+            Pages.DropdownCheckboxesRadioButtonsPage.ClickDropdownMenuElement((int)DropdownMenusEnum.Languages, (int)LanguagesDropdownEnum.CSharp);
+            Pages.DropdownCheckboxesRadioButtonsPage.ClickDropdownMenuElement((int)DropdownMenusEnum.Frameworks, (int)FrameworksDropdownEnum.Maven);
+            Pages.DropdownCheckboxesRadioButtonsPage.ClickDropdownMenuElement((int)DropdownMenusEnum.Web, (int)WebDropdownEnum.Css);
             Pages.DropdownCheckboxesRadioButtonsPage.ClickOptionFromOptionsCheckboxesList((int)OptionsCheckboxesEnum.Option1);
             Pages.DropdownCheckboxesRadioButtonsPage.ClickOptionFromOptionsCheckboxesList((int)OptionsCheckboxesEnum.Option3);
             Pages.DropdownCheckboxesRadioButtonsPage.SelectYellowFromColorsRadioButtonsList();

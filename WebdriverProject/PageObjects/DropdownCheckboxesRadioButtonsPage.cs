@@ -1,20 +1,12 @@
 ﻿using System.Collections.Generic;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.PageObjects;
+using WebdriverProject.WrapperElement;
 
 namespace WebdriverProject.PageObjects
 {
     public class DropdownCheckboxesRadioButtonsPage
     {
-        [FindsBy(How = How.XPath, Using = "//*[@id='dropdowm-menu-1']/option")]
-        private IList<IWebElement> _languagesDropdownList;
-
-        [FindsBy(How = How.XPath, Using = "//*[@id='dropdowm-menu-2']/option")]
-        private IList<IWebElement> _frameworksDropdownList;
-
-        [FindsBy(How = How.XPath, Using = "//*[@id='dropdowm-menu-3']/option")]
-        private IList<IWebElement> _webDropdownList;
-
         [FindsBy(How = How.XPath, Using = "//*[@id='checkboxes']/label[.//input[@type='checkbox']]")]
         private IList<IWebElement> _optionsCheckboxesList;
 
@@ -27,19 +19,9 @@ namespace WebdriverProject.PageObjects
         [FindsBy(How = How.XPath, Using = "//*[@id='fruit-selects']/option")]
         private IList<IWebElement> _fruitsDropdownList;
 
-        public void SelectCSharpFromLanguageDropdownList()
+        public void ClickDropdownMenuElement(int dropdownMenuIndex, int elementIndex)
         {
-            _languagesDropdownList[1].Click();
-        }
-
-        public void SelectMavenFromFrameworksDropdownList()
-        {
-            _frameworksDropdownList[1].Click();
-        }
-
-        public void SelectCssFromWebDropdownList()
-        {
-            _webDropdownList[1].Click();
+            new WrapperWebElement(By.XPath($"//*[@id='dropdowm-menu-{dropdownMenuIndex}']/option[{elementIndex}]")).Click();
         }
 
         public void ClickOptionFromOptionsCheckboxesList(int optionIndex)

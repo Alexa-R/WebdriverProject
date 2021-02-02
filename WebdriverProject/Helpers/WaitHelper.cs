@@ -8,9 +8,9 @@ namespace WebdriverProject.Helpers
 {
     public static class WaitHelper
     {
-        public static WebDriverWait CreateExplicitWait(double secondsNumber)
+        public static WebDriverWait CreateExplicitWait(double secondsValue)
         { 
-            var wait = new WebDriverWait(WebDriverFactory.Driver, TimeSpan.FromSeconds(secondsNumber));
+            var wait = new WebDriverWait(WebDriverFactory.Driver, TimeSpan.FromSeconds(secondsValue));
             
             return wait;
         }
