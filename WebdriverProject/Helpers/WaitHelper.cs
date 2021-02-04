@@ -15,29 +15,29 @@ namespace WebdriverProject.Helpers
             return wait;
         }
 
-        public static void WaitUntilTextToBePresentInElement(double secondsNumber, IWebElement element, string text)
+        public static void WaitUntilTextToBePresentInElement(double secondsValue, IWebElement element, string text)
         {
-            CreateExplicitWait(secondsNumber).Until(ExpectedConditions.TextToBePresentInElement(element, text));
+            CreateExplicitWait(secondsValue).Until(ExpectedConditions.TextToBePresentInElement(element, text));
         }
 
-        public static void WaitUntilElementDisappear(double secondsNumber, IWebElement element)
+        public static void WaitUntilElementDisappear(double secondsValue, IWebElement element)
         {
-            CreateExplicitWait(secondsNumber).Until((d) => !element.Displayed);
+            CreateExplicitWait(secondsValue).Until((d) => !element.Displayed);
         }
 
-        public static void WaitUntilElementDisplayed(double secondsNumber, IWebElement element)
+        public static void WaitUntilElementDisplayed(double secondsValue, IWebElement element)
         {
-            CreateExplicitWait(secondsNumber).Until((d) => element.Displayed);
+            CreateExplicitWait(secondsValue).Until((d) => element.Displayed);
         }
         
-        public static void WaitUntilElementToBeClickable(double secondsNumber, IWebElement element)
+        public static void WaitUntilElementToBeClickable(double secondsValue, IWebElement element)
         {
-            CreateExplicitWait(secondsNumber).Until(ExpectedConditions.ElementToBeClickable(element));
+            CreateExplicitWait(secondsValue).Until(ExpectedConditions.ElementToBeClickable(element));
         }
 
-        public static void WaitUntilItemsListCountEqualNumber(double secondsNumber, IList<IWebElement> itemsList, int number)
+        public static void WaitUntilItemsListCountEqualNumber(double secondsValue, IList<IWebElement> itemsList, int number)
         {
-            CreateExplicitWait(secondsNumber).Until((d) => itemsList.Count == number);
+            CreateExplicitWait(secondsValue).Until((d) => itemsList.Count == number);
         }
     }
 }
